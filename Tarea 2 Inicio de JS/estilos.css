@@ -1,0 +1,12 @@
+p {
+    border: solid 4px rgb(130, 238, 164);
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h1,
+h2 {
+    border: dotted 5px red;
+    margin: 25px;
+}
