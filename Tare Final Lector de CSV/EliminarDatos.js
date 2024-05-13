@@ -13,4 +13,9 @@ function obtenerContenidoCSV() {
     });
 
     return csvData;
-}
+};
+
+function guardarCSV(csvData) {
+    const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
+    saveAs(blob, 'data.csv');
+};
