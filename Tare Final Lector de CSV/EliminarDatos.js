@@ -15,7 +15,16 @@ function obtenerContenidoCSV() {
     return csvData;
 };
 
+
 function guardarCSV(csvData) {
     const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
     saveAs(blob, 'data.csv');
+};
+
+
+// ------------ ELIMINAR DATOS ------------
+function eliminarDato(row) {
+    const tableBody = document.querySelector('#CsvTable tbody');
+    tableBody.removeChild(row);
+    guardarCSV(obtenerContenidoCSV());
 };
